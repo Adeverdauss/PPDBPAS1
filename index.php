@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Pendaftaran Siswa Baru | SMK RUS</title>
+    <link rel="stylesheet" type="text/css"href="stylesheet.css">
+</head>
+
+<body>
+    <header class="header">
+        <h3>Pendaftaran Siswa Baru</h3>
+        <h1>SMK RUS</h1>
+    </header>
+
+    <h4 class="h4">Menu</h4>
+    <nav>
+        <ul class="ul">
+            <li><a href="form-daftar.php">Daftar Baru</a></li>
+            <li><a href="list-siswa.php">Pendaftar</a></li>
+        </ul>
+    </nav>
+    <?php if(isset($_GET['status'])): ?>
+    <p>
+        <?php
+            if($_GET['status'] == 'sukses'){
+                echo "Pendaftaran siswa baru berhasil!";
+            } else {
+                echo "Pendaftaran gagal!";
+            }
+        ?>
+    </p>
+<?php endif; ?>
+    </body>
+</html>
